@@ -16,7 +16,7 @@ Encore
     })
     .setPublicPath('/build')
     .addEntry('app', './assets/js/app.js')
-    .splitEntryChunks()
+    //    .addEntry('homepage', './assets/js/dashboard.js')
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
