@@ -1,0 +1,12 @@
+security:
+  firewalls:
+    dev:
+      pattern: ^/(_(profiler|wdt)|css|images|js)/
+      security: false
+    main:
+      stateless:  true
+      anonymous: true
+      http_basic: ~
+      logout:
+        path:   /logout
+        target: /

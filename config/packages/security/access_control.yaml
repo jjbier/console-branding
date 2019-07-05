@@ -1,0 +1,5 @@
+security:
+  access_control:
+    - { path: ^/admin, roles: ROLE_ADMIN }
+    - { path: ^/library, roles: ROLE_LIBRARY_USER }
+    - { path: ^/publisher, roles: ROLE_PUBLISHER_USER }
