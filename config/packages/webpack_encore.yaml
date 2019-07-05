@@ -7,4 +7,4 @@ webpack_encore:
 
     # if using Encore.enableIntegrityHashes() specify the crossorigin attribute value (default: false, or use 'anonymous' or 'use-credentials')
     # crossorigin: 'anonymous'
-    cache: 'false'
+    cache: false

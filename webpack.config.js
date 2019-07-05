@@ -53,8 +53,7 @@ Encore
         corejs: 3
     })
 
-    // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
