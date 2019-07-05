@@ -1,12 +1,17 @@
+{% spaceless %}
 <!DOCTYPE html>
-<html>
+<html lang="{{ app.request.locale }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% block title %}Welcome  | Blank Page {% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <title>Xebook | {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 , shrink-to-fit=no, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Xebook Admin panel">
+    <meta name="author" content="Xercode Media Software SL">
+    <link rel="icon" type="image/icon" sizes="32x32" href="{{ asset('build/images/favicon.ico') }}">
+    <link rel="apple-touch-icon"  type="image/png" sizes="180x180" href="{{ asset('build/images/favicon.png') }}">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
@@ -21,3 +26,4 @@
 {% endblock %}
 </body>
 </html>
+{% endspaceless %}
