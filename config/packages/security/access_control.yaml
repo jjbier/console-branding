@@ -1,5 +1,7 @@
 security:
   access_control:
+    - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/admin, roles: ROLE_ADMIN }
     - { path: ^/library, roles: ROLE_LIBRARY_USER }
     - { path: ^/publisher, roles: ROLE_PUBLISHER_USER }
+    - { path: ^/, roles: ROLE_USER }

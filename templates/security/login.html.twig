@@ -1,0 +1,48 @@
+{% spaceless %}
+    <!DOCTYPE html>
+    <html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Xebook | {% block title %}Log in!{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1 , shrink-to-fit=no, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="description" content="Xebook Admin panel">
+        <meta name="author" content="Xercode Media Software SL">
+        <link rel="icon" type="image/icon" sizes="32x32" href="{{ asset('build/images/favicon.ico') }}">
+        <link rel="apple-touch-icon"  type="image/png" sizes="180x180" href="{{ asset('build/images/favicon.png') }}">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <form method="post">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <label for="inputEmail" class="sr-only">Email</label>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary" type="submit">
+                Sign in
+            </button>
+        </form>
+    </div>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+    </body>
+    </html>
+{% endspaceless %}

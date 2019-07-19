@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Xebook | {% block title %}{% endblock %}</title>
+    <title>Xebook | {% block title %}Publisher{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1 , shrink-to-fit=no, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="msapplication-tap-highlight" content="no">
@@ -12,14 +12,27 @@
     <meta name="author" content="Xercode Media Software SL">
     <link rel="icon" type="image/icon" sizes="32x32" href="{{ asset('build/images/favicon.ico') }}">
     <link rel="apple-touch-icon"  type="image/png" sizes="180x180" href="{{ asset('build/images/favicon.png') }}">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
-<body>
+<body class="hold-transition sidebar-mini">
 <div class="wrapper">
-    {% block body %}{% endblock body %}
+    {% include 'common/navbar.html.twig' %}
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Administración</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'common/sidebar.html.twig' %}
+    {% include 'common/layout.html.twig' %}
+    {% include 'common/control-sidebar.html.twig' %}
+    {% include 'common/footer.html.twig' %}
+
 </div>
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}

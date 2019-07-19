@@ -1,17 +1,4 @@
 security:
   providers:
-    in_memory:
-      memory:
-        users:
-          library:
-            password: library
-            roles: 'ROLE_LIBRARY_USER'
-          publisher:
-            password: publisher
-            roles: 'ROLE_PUBLISHER_USER'
-          admin:
-            password: admin
-            roles: 'ROLE_ADMIN'
-          xebook:
-            password: xebook
-            roles: 'ROLE_SUPER_ADMIN'
+    security_users:
+      id: App\Security\User\UserProvider

@@ -1,0 +1,238 @@
+#packages, #packageContent {
+  padding: 12px 15px;
+}
+
+#breadcrumb a i {
+  vertical-align: baseline;
+  font-size: 16px;
+}
+
+#wizardUploader {
+  position: relative;
+}
+#wizardUploader #formStepOne,
+#wizardUploader #uploadStepOne {
+  z-index: 200;
+}
+#wizardUploader #formStepTwo,
+#wizardUploader #uploadStepTwo {
+  z-index: 100;
+  opacity: 0;
+  display: none;
+}
+#articleDropzone {
+  overflow-y: scroll;
+  height: 360px;
+}
+#singleUploader {
+  position: relative;
+}
+#singleUploader p.alert {
+  position: relative;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  opacity: 0.7;
+}
+#singleUploader i.fa {
+  position: relative;
+  display: block;
+  font-size: 100px;
+  color: green;
+  width: 107px;
+  margin: 0 auto;
+  opacity: 0.3;
+}
+#myIssueUploader {
+  position: absolute;
+  background: transparent;
+  z-index: 10;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+#myIssueUploader .dz-preview {
+  position: relative;
+  min-height: 130px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border: 1px #f68026 solid;
+  width: 550px;
+  color: white;
+  padding: 25px;
+  border-radius: 1em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#myIssueUploader .dropzone-error {
+  position: relative;
+  min-height: 130px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  border: 1px #f68026 solid;
+  width: 550px;
+  padding: 25px;
+  border-radius: 1em;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+#myIssueUploader .dz-preview.dz-error {
+  display: none;
+}
+#myIssueUploader .dz-preview.dz-processing.dz-error {
+  display: block;
+}
+#myIssueUploader .dz-preview .dz-progress {
+  position: absolute;
+  top: 80px;
+  left: 6px;
+  right: 6px;
+  height: 6px;
+  background: #d7d7d7;
+  display: none;
+}
+#myIssueUploader .dz-preview .dz-progress .dz-upload {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background-color: #8cc657;
+}
+#myIssueUploader .dz-preview.dz-processing .dz-progress {
+  display: block;
+}
+#myIssueUploader .dz-preview .dz-progress .dz-upload {
+  -webkit-animation: loading 0.4s linear infinite;
+  -moz-animation: loading 0.4s linear infinite;
+  -o-animation: loading 0.4s linear infinite;
+  -ms-animation: loading 0.4s linear infinite;
+  animation: loading 0.4s linear infinite;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  -ms-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-image: url("/images/spritemap.png");
+  background-repeat: repeat-x;
+  background-position: 0px -400px;
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  #myIssueUploader .dz-preview .dz-progress .dz-upload {
+    background-image: url("/images/spritemap@2x.png");
+    -webkit-background-size: 428px 406px;
+    -moz-background-size: 428px 406px;
+    background-size: 428px 406px;
+  }
+}
+#myIssueUploader .dz-preview.dz-success .dz-progress {
+  display: block;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+#myIssueUploader .dz-preview .dz-success-mark,
+#myIssueUploader .dz-preview .dz-error-mark {
+  display: none;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+  right: -10px;
+  top: -10px;
+}
+#myIssueUploader .dz-preview.dz-success .dz-success-mark {
+  display: block;
+}
+#myIssueUploader .dz-preview.dz-error .dz-error-mark {
+  display: block;
+}
+#myIssueUploader .dz-preview .dz-error-message {
+  display: none;
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  background: rgba(245,245,245,0.8);
+  padding: 8px 10px;
+  color: #800;
+  min-width: 140px;
+  max-width: 500px;
+  z-index: 500;
+}
+#myIssueUploader .dz-preview .dz-remove {
+  border: 1px solid #666;
+  background-color: #f68026;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  padding: 4px 5px;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  width: 200px;
+  bottom: 5px;
+  left: 300px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-size: 14px;
+  border-radius: 4px;
+  line-height: 1.42857;
+  padding: 10px 20px;
+}
+
+#myIssueUploader .accept-upload {
+  border: 1px solid #666;
+  background-color: #f68026;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  padding: 4px 5px;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  width: 200px;
+  bottom: 5px;
+  left: 25px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-size: 14px;
+  border-radius: 4px;
+  line-height: 1.42857;
+  padding: 10px 20px;
+}
+
+.upload-info {
+  color: #514932;
+  bottom: 45px;
+  position: absolute;
+}
+
+.status-box {
+  padding: 5px 10px;
+  margin-bottom: 0;
+  border: 1px solid #ccc;
+  cursor: not-allowed;
+  background-color: #eee;
+}
+
+.close-upload{
+  background-color: #f68026;
+  padding: 8px;
+  position: absolute;
+  bottom: 99px;
+  right: -1px;
+  color: #FFFFFF;
+}

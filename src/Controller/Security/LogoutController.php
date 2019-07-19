@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route(name="logout", path="/logout", methods={"GET"})
+ * @Route(name="app_logout", path="/logout", methods={"GET"})
  */
 class LogoutController
 {

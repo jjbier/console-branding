@@ -1,4 +1,61 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700);
 @import "~bootstrap/scss/functions";
 @import "shared/bootstrap-variables";
 @import "~bootstrap/scss/bootstrap";
-@import "~@fortawesome/fontawesome-free";
+@import 'shared/plugins/fontawesome';
+// Variables and Mixins
+// ---------------------------------------------------
+@import 'shared/variables';
+@import 'shared/mixins';
+
+// Core
+// ---------------------------------------------------
+@import 'shared/layout';
+
+// Components
+// ---------------------------------------------------
+@import 'shared/main-header';
+@import 'shared/brand';
+@import 'shared/main-sidebar';
+@import 'shared/sidebar-mini';
+@import 'shared/control-sidebar';
+@import 'shared/dropdown';
+@import 'shared/forms';
+@import 'shared/progress-bars';
+@import 'shared/small-box';
+@import 'shared/cards';
+@import 'shared/info-box';
+@import 'shared/timeline';
+@import 'shared/buttons';
+@import 'shared/callout';
+@import 'shared/alerts';
+@import 'shared/navs';
+@import 'shared/products';
+@import 'shared/table';
+@import 'shared/labels';
+@import 'shared/direct-chat';
+@import 'shared/users-list';
+@import 'shared/carousel';
+@import 'shared/social-widgets';
+@import 'shared/modals';
+
+// Plugins
+// ---------------------------------------------------
+@import 'shared/plugins/fullcalendar';
+@import 'shared/plugins/select2';
+@import 'shared/plugins/bootstrap-slider';
+@import 'shared/plugins/icheck-bootstrap';
+@import 'shared/plugins/mapael';
+@import 'shared/plugins/jqvmap';
+@import 'shared/plugins/sweetalert2';
+@import 'shared/plugins/toastr';
+@import 'shared/plugins/miscellaneous';
+
+// Miscellaneous
+// ---------------------------------------------------
+@import 'shared/miscellaneous';
+@import 'shared/print';
+@import 'shared/text';
+@import 'shared/elevation';
+@import 'shared/colors';

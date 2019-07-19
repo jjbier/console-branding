@@ -4,9 +4,10 @@ security:
       pattern: ^/(_(profiler|wdt)|css|images|js)/
       security: false
     main:
-      stateless:  true
+      stateless:  false
       anonymous: true
-      http_basic: ~
+      guard:
+        authenticators:
+          - App\Security\Guard\LoginFormAuthenticator
       logout:
-        path:   /logout
-        target: /
+        path: app_logout
